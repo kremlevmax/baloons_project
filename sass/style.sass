@@ -4,7 +4,7 @@
     box-sizing: border-box
 
 body
-    font-family: 'Roboto'
+    font-family: 'Roboto', sans-serif
     font-weight: 400
     font-size: 16
     letter-spacing: 2px
@@ -79,10 +79,6 @@ body
         animation: fromBottomToUp 1s ease
         animation-fill-mode: backwards
 
-        &:hover::after
-            transform: scaleX(1.5) scaleY(1.9)
-            opacity: 0
-
         &::after
             content: ""
             position: absolute
@@ -95,6 +91,10 @@ body
             display: inline-block
             z-index: -1
             transition: all .3s ease
+        
+        &:hover::after
+            transform: scaleX(1.5) scaleY(1.9)
+            opacity: 0
 
 @keyframes fromRightToLeft
     0%
