@@ -3,13 +3,16 @@
     padding: 0
     box-sizing: border-box
 
+html
+    font-size: 62.5%
+
 body
     font-family: 'Roboto', sans-serif
     font-weight: 400
-    font-size: 16
-    letter-spacing: 2px
+    font-size: 1.6rem
+    letter-spacing: .2rem
     background-color: #ffffff
-    padding: 50px
+    padding: 5rem
     color: #777777
 
 .container
@@ -23,10 +26,10 @@ body
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%)
     &__logo
         position: absolute
-        left: 50px
-        top: 50px
-        height: 70px
-        width: 56px
+        left: 5rem
+        top: 5rem
+        height: 7rem
+        width: 5.6rem
 
 .title-box
     position: absolute
@@ -38,22 +41,24 @@ body
 
 .title-text
     color: #FFFFFF
-    margin-bottom: 50px
+    margin-bottom: 5rem
+
     &__line-main
         display: block
-        letter-spacing: 10px
+        letter-spacing: 1rem
         font-weight: 800
-        font-size: 50px
-        line-height: 60px
+        font-size: 5rem
+        line-height: 6rem
         text-transform: uppercase
         animation: fromRightToLeft
         animation-duration: 2s
         animation-timing-function: ease
+
     &__line-secondary
         display: block
-        letter-spacing: 5px
+        letter-spacing: .5rem
         font-weight: 200
-        font-size: 40px
+        font-size: 4rem
         animation: fromLeftToRight
         animation-duration: 2s
         animation-timing-function: ease
@@ -64,13 +69,14 @@ body
     text-decoration: none
     color: #777777  
     background-color: #ffffff
-    padding: 15px 40px  
-    border-radius: 50px
+    padding: 1.5rem 4rem  
+    border-radius: 5rem
     transition: all .3s ease
 
     &:hover
         transform: translateY(-2px)
         box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px
+
     &:active
         transform: translateY(3px)
         box-shadow: rgba(50, 50, 93, 0.1) 0px 6px 12px -2px, rgba(0, 0, 0, 0.1) 0px 3px 7px -3px
@@ -87,7 +93,7 @@ body
             width: 100%
             height: 100%
             background-color: #ffffff
-            border-radius: 50px
+            border-radius: 5rem
             display: inline-block
             z-index: -1
             transition: all .3s ease
@@ -99,9 +105,9 @@ body
 @keyframes fromRightToLeft
     0%
         opacity: 0
-        transform: translateX(100px)  
+        transform: translateX(10rem)  
     70%
-        transform: translateX(-10px)
+        transform: translateX(-1rem)
     100%
         opacity: 1
         transform: translateX(0)
@@ -109,9 +115,9 @@ body
 @keyframes fromLeftToRight
     0%
         opacity: 0
-        transform: translateX(-100px)  
+        transform: translateX(-10rem)  
     70%
-        transform: translateX(10px)
+        transform: translateX(1rem)
     100%
         opacity: 1
         transform: translateX(0)
@@ -119,7 +125,8 @@ body
 @keyframes fromBottomToUp
     0%
         opacity: 0
-        transform: translateY(50px)  
+        transform: translateY(5rem)  
+        
     100%
         opacity: 1
         transform: translateY(0)
