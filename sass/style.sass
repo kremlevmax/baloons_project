@@ -1,40 +1,8 @@
-$color-gray: #777777
-$color-gray-light: #F7F7F7
-$color-white: #FFFFFF
-$color-black: #000000
-$color-brown: #BA8554
-$color-brown-dark: #A14F03
-
-$color-button-text: $color-gray
-$color-button-background: $color-white
-
-$color-container-background: $color-gray-light
-$color-container-text: $color-white
-$color-main-text: $color-gray
-$color-main-background: $color-white
-
-$shadow-light: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px
-$shadow-deep: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px
-
-*, ::after, ::before
-    margin: 0
-    padding: 0
-    box-sizing: border-box
-
-html
-    font-size: 62.5%
-
-body
-    font-family: 'Roboto', sans-serif
-    font-weight: 400
-    font-size: 1.6rem
-    letter-spacing: .2rem
-    background-color: $color-main-background
-    padding: 5rem
-    color: $color-main-text
-
-.container
-    background-color: $color-container-background
+@import "abstracts/variables"
+@import "abstracts/_keyframes"
+@import "base/base"
+@import "base/_typography"
+@import "components/button"
 
 .header
     position: relative
@@ -47,104 +15,16 @@ body
         top: 5rem
         height: 7rem
         width: 5.6rem
-
-.title-box
-    position: absolute
-    top: 40%
-    left: 50%
-    transform: translate(-50%, -50%)
-    width: 100%
-    text-align: center
-
-.title-text
-    color: $color-container-text
-    margin-bottom: 5rem
-
-    &__line-main
-        display: block
-        letter-spacing: 1rem
-        font-weight: 800
-        font-size: 5rem
-        line-height: 6rem
-        text-transform: uppercase
-        animation: fromRightToLeft
-        animation-duration: 2s
-        animation-timing-function: ease
-
-    &__line-secondary
-        display: block
-        letter-spacing: .5rem
-        font-weight: 200
-        font-size: 4rem
-        animation: fromLeftToRight
-        animation-duration: 2s
-        animation-timing-function: ease
-
-.btn
-    display: inline-block
-    position: relative
-    text-decoration: none
-    color: $color-button-text  
-    background-color: $color-button-background
-    padding: 1.5rem 4rem  
-    border-radius: 5rem
-    box-shadow: $shadow-light
-    transition: all .3s ease
-
-    &:hover
-        transform: translateY(-2px)
-        box-shadow: $shadow-deep
-
-    &:active
-        transform: translateY(3px)
-        box-shadow: $shadow-light
-    
-    &_animated
-        animation: fromBottomToUp 1s ease
-        animation-fill-mode: backwards
-
-        &::after
-            content: ""
-            position: absolute
-            top: 0
-            left: 0
-            width: 100%
-            height: 100%
-            background-color: $color-button-background
-            border-radius: 5rem
-            display: inline-block
-            z-index: -1
-            transition: all .3s ease
-
         
-        &:hover::after
-            transform: scaleX(1.2) scaleY(1.5)
-            opacity: 0
+    .title-box
+        position: absolute
+        top: 40%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 100%
+        text-align: center
 
-@keyframes fromRightToLeft
-    0%
-        opacity: 0
-        transform: translateX(10rem)  
-    70%
-        transform: translateX(-1rem)
-    100%
-        opacity: 1
-        transform: translateX(0)
 
-@keyframes fromLeftToRight
-    0%
-        opacity: 0
-        transform: translateX(-10rem)  
-    70%
-        transform: translateX(1rem)
-    100%
-        opacity: 1
-        transform: translateX(0)
 
-@keyframes fromBottomToUp
-    0%
-        opacity: 0
-        transform: translateY(5rem)  
-    100%
-        opacity: 1
-        transform: translateY(0)
+
+
