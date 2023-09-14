@@ -1,29 +1,13 @@
-@import "abstracts/variables"
-@import "abstracts/_keyframes"
-@import "base/base"
-@import "base/_typography"
-@import "components/button"
-@import layout/about
+@import abstracts/variables
+@import abstracts/_keyframes
 
-.header
-    position: relative
-    height: 95vh
-    background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1,1 , 1, 0.7) 99.94%), url(../img/baloons.jpg) center / cover no-repeat
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%)
-    &__logo
-        position: absolute
-        left: 5rem
-        top: 5rem
-        height: 7rem
-        width: 5.6rem
-        
-    .title-container
-        position: absolute
-        top: 40%
-        left: 50%
-        transform: translate(-50%, -50%)
-        width: 100%
-        text-align: center
+@import base/base
+@import base/_typography
+
+@import components/button
+
+@import layout/_about
+@import layout/_header
 
 
 
